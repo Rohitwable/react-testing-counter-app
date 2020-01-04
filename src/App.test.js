@@ -44,7 +44,9 @@ test('render counter display', () => {
 });
 
 test('counter starts at 0', () => {
-
+  const wrapper = setupComponent();
+  const initialCounterState = wrapper.state('counter');
+  expect(initialCounterState).toBe(0);
 });
 
 test('clicking counter button increaments counter display', () => {
