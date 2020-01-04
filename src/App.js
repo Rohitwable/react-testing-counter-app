@@ -10,8 +10,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" data-test="app-component">
-        <h1 data-test="counter-display">The counter is currently</h1>
-        <button data-test="counter-button">Counter</button>
+        <h1 data-test="counter-display">The counter is currently{this.state.counter}</h1>
+        <button data-test="counter-button" onClick={() => this.setState({counter: this.state.counter + 1})}>Counter</button>
       </div>
     );
 
